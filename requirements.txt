@@ -1,0 +1,6 @@
+google-genai
+pandas
+numpy
+sentence-transformers
+faiss-cpu
+python-dotenv

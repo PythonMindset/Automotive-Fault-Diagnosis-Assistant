@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Automotive Fault Diagnosis Assistant</title>
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="{{ url_for('static', filename='style/index.css') }}">
+</head>
+<body>
+
+  <div class="container">
+    <h1>Automotive Fault Diagnosis Assistant</h1>
+
+    <form id="diagnoseForm" method="POST" action="/">
+      <div class="inputbox">
+        <textarea id="userInput" name="query" placeholder=""></textarea>
+        <span class="placeholder">Describe your vehicle problem...</span>
+      </div>
+
+      <button id="diagnoseBtn" type="button">Diagnose</button>
+    </form>
+  </div>
+
+  <!-- Loader overlay (keeps existing loader) -->
+  <div id="loaderOverlay" role="status" aria-hidden="true">
+    <div class="loader-wrapper" aria-hidden="true">
+      <span class="loader-letter">D</span>
+      <span class="loader-letter">i</span>
+      <span class="loader-letter">a</span>
+      <span class="loader-letter">g</span>
+      <span class="loader-letter">n</span>
+      <span class="loader-letter">o</span>
+      <span class="loader-letter">s</span>
+      <span class="loader-letter">i</span>
+      <span class="loader-letter">n</span>
+      <span class="loader-letter">g</span>
+      <div class="loader" aria-hidden="true"></div>
+    </div>
+  </div>
+
+  <!-- JS -->
+  <script src="{{ url_for('static', filename='script/index.js') }}"></script>
+</body>
+</html>

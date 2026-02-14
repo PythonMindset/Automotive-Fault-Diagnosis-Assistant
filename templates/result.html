@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Diagnosis Result — Automotive Fault Diagnosis Assistant</title>
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="{{ url_for('static', filename='style/result.css') }}">
+</head>
+<body>
+  <div class="container result-container" role="main">
+    <h1>Diagnosis Result</h1>
+
+    <section class="card">
+      <h2>Your description</h2>
+      <div class="box input-box">
+        <textarea id="userInputView" readonly aria-label="Your description">{{ user_input }}</textarea>
+      </div>
+    </section>
+
+    <section class="card">
+      <h2>Based on your symptoms</h2>
+      <div class="box answer-box" id="answerBox" aria-live="polite">
+        <!-- preserve formatting and newlines -->
+        <pre id="answerPre">{{ answer }}</pre>
+      </div>
+
+      <div class="actions">
+        <a href="/" class="action-btn primary" id="newDiagnosisBtn">New diagnosis</a>
+      </div>
+    </section>
+  </div>
+
+  <!-- JS (minimal: allow Escape to return home) -->
+  <script src="{{ url_for('static', filename='script/result.js') }}"></script>
+</body>
+</html>

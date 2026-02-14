@@ -1,0 +1,145 @@
+/* Result page styles — consistent with index look & feel, simplified (no loader) */
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(135deg, #0a0f24, #1a103d, #2d0c45);
+    color: #fff;
+    -webkit-font-smoothing: antialiased;
+}
+
+.container {
+    width: min(880px, 96vw);
+    max-width: 880px;
+    padding: 28px;
+    border-radius: 18px;
+    background: rgba(255, 255, 255, 0.04);
+    backdrop-filter: blur(10px);
+    box-shadow: 0 0 30px rgba(255, 94, 247, 0.10);
+    animation: fadeIn 0.9s ease;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.result-container h1 {
+    text-align: center;
+    font-size: 22px;
+    margin: 0;
+    background: linear-gradient(45deg, #ff5cf0, #ff8f3f);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+/* Card sections */
+.card {
+    background: rgba(255,255,255,0.02);
+    border-radius: 12px;
+    padding: 16px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    box-shadow: 0 6px 18px rgba(0,0,0,0.35);
+}
+
+/* Titles inside card */
+.card h2 {
+    margin: 0;
+    font-size: 14px;
+    color: #eae1f8;
+}
+
+/* Content boxes */
+.box {
+    background: rgba(255,255,255,0.03);
+    border-radius: 10px;
+    padding: 12px;
+    min-height: 70px;
+    overflow: auto;
+}
+
+.input-box textarea {
+    width: 100%;
+    height: 110px;
+    border: none;
+    resize: none;
+    background: transparent;
+    color: #fff;
+    font-size: 14px;
+    line-height: 1.45;
+    outline: none;
+    white-space: pre-wrap;
+}
+
+/* Answer area uses pre to preserve formatting */
+.answer-box pre {
+    margin: 0;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+    color: #f4f1ff;
+    font-size: 15px;
+    line-height: 1.6;
+}
+
+/* Actions row */
+.actions {
+    display: flex;
+    gap: 10px;
+    margin-top: 8px;
+    flex-wrap: wrap;
+}
+
+.action-btn {
+    padding: 10px 14px;
+    border-radius: 10px;
+    border: none;
+    cursor: pointer;
+    font-size: 14px;
+    background: linear-gradient(90deg, rgba(255,255,255,0.03), rgba(255,255,255,0.01));
+    color: #fff;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 6px 14px rgba(0,0,0,0.4);
+    transition: transform 0.14s ease, box-shadow 0.14s ease;
+}
+
+.action-btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 12px 26px rgba(0,0,0,0.55);
+}
+
+/* primary action */
+.action-btn.primary {
+    background: linear-gradient(45deg, #ff5cf0, #ff8f3f);
+    box-shadow: 0 10px 22px rgba(255, 94, 247, 0.25);
+}
+
+/* small responsive tweaks */
+@media (max-width: 720px) {
+    .container {
+        padding: 18px;
+    }
+    .input-box textarea {
+        height: 90px;
+    }
+    .action-btn { flex: 1 1 100%; text-align: center; }
+}
+
+/* simple fadeIn */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
