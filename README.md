@@ -4,7 +4,7 @@
 ![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)
 ![Status: Active](https://img.shields.io/badge/Status-Active-brightgreen)
 
-**GitHub**: [PythonMindset/Automotive-Fault-Diagnosis-Assistant](https://github.com/PythonMindset/Automotive-Fault-Diagnosis-Assistant)
+**GitHub**: [AliMaqsood-Code/Automotive-Fault-Diagnosis-Assistant](https://github.com/AliMaqsood-Code/Automotive-Fault-Diagnosis-Assistant)
 
 A hybrid **Generative AI + Retrieval-Augmented Generation (RAG)** system that provides intelligent automotive fault diagnosis. The platform combines semantic search with FAISS embeddings for knowledge retrieval and Google Gemini API for context-aware response generation, demonstrating a modern hybrid architecture for AI-powered expert systems.
 
@@ -99,7 +99,7 @@ Responses are automatically saved for future reference, improving response time 
 
 1. **Clone the repository:**
    ```bash
-   git clone https://github.com/PythonMindset/Automotive-Fault-Diagnosis-Assistant.git
+   git clone https://github.com/AliMaqsood-Code/Automotive-Fault-Diagnosis-Assistant.git
    cd Automotive-Fault-Diagnosis-Assistant
    ```
 
@@ -271,10 +271,10 @@ If you use this project in your research or coursework, please cite it as:
 
 ```bibtex
 @software{pfai_automotive_diagnosis_2026,
-  author = {PythonMindset},
+  author = {AliMaqsood-Code},
   title = {Automotive Fault Diagnosis Assistant: A Hybrid GenAI + RAG System},
   year = {2026},
-  url = {https://github.com/PythonMindset/Automotive-Fault-Diagnosis-Assistant}
+  url = {https://github.com/AliMaqsood-Code/Automotive-Fault-Diagnosis-Assistant}
 }
 ```
 
